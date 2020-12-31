@@ -1,3 +1,4 @@
+//UUID to link to the right obj in the database
 const lodash = require('lodash');
 const { v4: uuid } = require('uuid');
 const bcrypt = require('bcrypt');
