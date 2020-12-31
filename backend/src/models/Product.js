@@ -1,8 +1,9 @@
+//UUID to link to the right obj in the database
 const { v4: uuid } = require('uuid');
-const lodash = require('lodash');
+const lodash = require('lodash'); // prividing utility functions
 const fs = require('fs');
 
-class Product {
+class Product { //classes
     constructor(data) {
         this.id = uuid();
         this.name = data.name;
