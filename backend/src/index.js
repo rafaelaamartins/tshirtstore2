@@ -1,6 +1,7 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const cors = require('cors');
+//import packages
+const express = require('express'); //parses incoming requests
+const bodyParser = require('body-parser'); //parses incoming bpdies based on user input
+const cors = require('cors'); //enabling cors
 const multer = require('multer');
 const path = require('path');
 const lodash = require('lodash');
@@ -13,7 +14,7 @@ const ProductModel = require('./models/Product');
 
 const SECRET_KEY = 'tshirtStore';
 
-const app = express();
+const app = express(); //create and configure express app
 
 app.use(bodyParser.json());
 app.use(cors());
