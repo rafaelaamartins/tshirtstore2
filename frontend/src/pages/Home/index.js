@@ -1,3 +1,4 @@
+//home set up, request products
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 import Swal from 'sweetalert2';
@@ -8,14 +9,14 @@ function Home() {
     const history = useHistory();
 
     React.useEffect(() => {
-        function loadPosts() {
+        function loadProducts() {
             api.get('/product/all').then(({ data }) => {
                 setProducts(data);
             }).catch(error => {
                 Swal.fire("Error!", error.message, "error");
             });
         }
-        loadPosts();
+        loadProducts();
     }, []);
 
     return (

@@ -1,3 +1,4 @@
+//Menu component
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { isAuthenticated } from '../../services/auth';
