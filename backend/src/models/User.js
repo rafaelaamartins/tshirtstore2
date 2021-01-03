@@ -6,11 +6,10 @@ const fs = require('fs');
 
 class User {
     constructor(data) {
-        console.log(data);
         this.id = uuid();
-        this.name = data?.name;
-        this.email = data?.email;
-        this.password = bcrypt.hashSync(data?.password.toString(), 8); // requesting crypt password 
+        this.name = data.name;
+        this.email = data.email;
+        this.password = bcrypt.hashSync(data.password.toString(), 8); // requesting crypt password 
     }
 }
 
