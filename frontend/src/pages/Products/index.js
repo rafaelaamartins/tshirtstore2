@@ -1,3 +1,5 @@
+// Create table and give commands, crud actions
+
 import React from "react";
 import api from "../../services/api";
 import Swal from "sweetalert2";
@@ -22,6 +24,7 @@ export default function MyProducts() {
     return loadProducts();
   }, []);
 
+  //actions function, view edit remove
   const view = (id) => { history.push(`/product/${id}`); }
   const edit = (id) => { history.push(`/product/${id}/edit`); }
   const remove = (id) => {
@@ -43,7 +46,7 @@ export default function MyProducts() {
       }
     })
   }
-
+//html table
   return (
     <div className="container mt-5">
       <div className="row">
